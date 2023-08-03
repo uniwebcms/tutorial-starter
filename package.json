@@ -1,20 +1,20 @@
 {
-    "name": "tutorial-starter",
-    "version": "1.0.0",
+    "name": "@uniwebcms/tutorial-starter",
+    "version": "1.0.1",
     "description": "An npm library that helps you quickly create a tutorial website using Docusaurus.",
     "bin": {
-        "tutorial-starter": "./init.js"
+        "@uniwebcms/tutorial-starter": "./init.js"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://Xiang-Zuo@github.com/Xiang-Zuo/tutorial-starter.git"
+        "url": "git+https://github.com/uniwebcms/tutorial-starter.git"
     },
     "author": "xiang@proximify.ca",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Xiang-Zuo/tutorial-starter/issues"
+        "url": "https://github.com/uniwebcms/tutorial-starter/issues"
     },
-    "homepage": "https://github.com/Xiang-Zuo/tutorial-starter#readme",
+    "homepage": "https://github.com/uniwebcms/tutorial-starter#readme",
     "dependencies": {
         "fs-extra": "^11.1.1"
     }
