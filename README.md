@@ -14,7 +14,7 @@ tutorial-starter is an npm library that helps you quickly create a tutorial webs
 To create a new tutorial website, use the following command:
 
 ```bash
-npx website-starter [project-name]
+npx @uniwebcms/tutorial-starter [project-name]
 ```
 
 This will initialize a new tutorial website project in the `project-name` directory under your project root. The <b>\`project-name\`</b> argument is optional. If you don't provide a project name, the default name "tutorial" will be used.
@@ -64,8 +64,10 @@ To start a local development server and preview your tutorial website, run the f
 
 ```bash
 cd my-tutorial-website
+npm install
 npm start
 # OR
+yarn install
 yarn start
 ```
 
