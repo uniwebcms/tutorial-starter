@@ -76,7 +76,7 @@ const Table = ({ schema }) => {
     );
 };
 
-export default function JSViewer(props) {
+export default function SchemaViewer(props) {
     const { schema } = props;
 
     const [current, setCurrent] = useState(null);

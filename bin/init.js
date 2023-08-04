@@ -2,10 +2,10 @@
 
 const fs = require('fs-extra');
 const path = require('path');
+const chalk = require('chalk');
+const { version } = require('../package.json');
 
-const projectName = process.argv[2] || 'tutorial';
-
-const main = async () => {
+const init = (projectName) => {
     const projectDir = path.join(process.cwd(), projectName);
 
     try {
@@ -15,16 +15,17 @@ const main = async () => {
         }
 
         // Get the template directory path from your npm module
-        const templateDir = path.join(__dirname, 'template');
+        const templateDir = path.join(path.dirname(__dirname), 'template');
 
         // Copy the template directory to the destination directory
-        await fs.copy(templateDir, projectDir);
+        fs.copySync(templateDir, projectDir);
 
-        console.log('Project initialized successfully.');
+        const message = 'Project initialized successfully. (version: ' + chalk.green(version) + ')';
+        console.log(message);
     } catch (error) {
         console.error('Error initializing project:', error.message);
         process.exit(1);
     }
 };
 
-main();
+exports.init = init;

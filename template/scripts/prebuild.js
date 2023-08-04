@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // This is a Node.js script that you'd run before building your Docusaurus site.
 const sizeOf = require('image-size');
 const path = require('path');

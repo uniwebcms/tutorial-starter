@@ -37,7 +37,7 @@ my-tutorial-website/
     ├── src
     │   ├── components
     │   │   ├── Gallery.js
-    │   │   └── JSViewer.js
+    │   │   └── SchemaViewer.js
     │   ├── css
     │   │   └── custom.css
     │   └── pages
