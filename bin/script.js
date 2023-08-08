@@ -18,6 +18,5 @@ if (action === 'init') {
     console.log('Unknown action:', chalk.cyan(action));
     console.log('Here are the available actions:');
     console.log(chalk.cyan('init'), '- Initializes a new project. Usage: ' + chalk.green('npx @uniwebcms/tutorial-starter init [project-name]'));
-    // console.log('check-updates - Checks for updates. Usage: ', chalk.green('npx @uniwebcms/tutorial-starter check-updates'));
     process.exit(1);
 }

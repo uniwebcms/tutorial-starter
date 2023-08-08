@@ -9,22 +9,24 @@ function checkForUpdates() {
 
     try {
         // Get path to the version.yaml file
-        const currentVersion = packageJson.dependencies['@uniwebcms/tutorial-starter-utils'];
+        let currentVersion = packageJson.dependencies['@uniwebcms/tutorial-starter'];
 
         if (!currentVersion) {
             throw new Error('Unable to find current version.');
         }
 
+        currentVersion = currentVersion.replace(/^[\^~]/, '');
+
         // Fetch the latest version from npm
-        const latestVersion = execSync('npm view @uniwebcms/tutorial-starter-utils version').toString().trim();
+        const latestVersion = execSync('npm view @uniwebcms/tutorial-starter version').toString().trim();
 
         // Compare versions
         if (currentVersion === latestVersion) {
             console.log("You're up to date!");
         } else {
             console.log(chalk.cyan.bgBlack('notice'));
-            console.log(chalk.cyan.bgBlack('notice'), 'An update is available!', chalk.red(doc.version), '->', chalk.green(latestVersion));
-            console.log(chalk.cyan.bgBlack('notice'), 'Change the version of', chalk.white.bgBlack('@uniwebcms/tutorial-starter-utils'), 'in', chalk.cyan('package.json'), 'to', chalk.green(latestVersion), 'to update.');
+            console.log(chalk.cyan.bgBlack('notice'), 'An update is available!', chalk.red(currentVersion), '->', chalk.green(latestVersion));
+            console.log(chalk.cyan.bgBlack('notice'), 'Change the version of', chalk.white.bgBlack('@uniwebcms/tutorial-starter'), 'in', chalk.cyan('package.json'), 'to', chalk.green(latestVersion), 'to update.');
             console.log(chalk.cyan.bgBlack('notice'));
         }
     } catch (err) {

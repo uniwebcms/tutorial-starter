@@ -1,8 +1,6 @@
 import React from 'react';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import 'photoswipe/dist/photoswipe.css';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import imageDimensions from '@site/static/img/dimensions.json';
 
 /**
  * Gallery of component preview images.
@@ -10,7 +8,7 @@ import imageDimensions from '@site/static/img/dimensions.json';
  * @returns
  */
 export default function (props) {
-    const { images = [] } = props;
+    const { images = [], getCompleteUrl, imageDimensions } = props;
 
     return (
         <Gallery id='image-gallery'>
@@ -26,7 +24,7 @@ export default function (props) {
                     borderRadius: '8px'
                 }}>
                 {images.map((image, index) => {
-                    const src = useBaseUrl(`/img/${image}`);
+                    const src = getCompleteUrl(`/img/${image}`);
 
                     const { height = 600, width = 800 } = imageDimensions[image] || {};
 
