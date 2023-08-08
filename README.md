@@ -32,12 +32,12 @@ my-tutorial-website/
     ├── docusaurus.config.js
     ├── package.json
     ├── scripts
+    │   ├── checkUpdate.js
     │   └── prebuild.js
     ├── sidebars.js
     ├── src
     │   ├── components
-    │   │   ├── Gallery.js
-    │   │   └── SchemaViewer.js
+    │   │   └── index.js
     │   ├── css
     │   │   └── custom.css
     │   └── pages
