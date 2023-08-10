@@ -10,7 +10,7 @@ one or more Uniweb modules.
 ### Prerequisites
 
 - Node.js (version 16.14 or higher)
-- npm (Node Package Manager) or Yarn
+- Yarn Package Manager
 
 ### Project Structure
 
@@ -44,7 +44,6 @@ tutorial/
     └── static
         ├── img
         │   ├── favicon.png
-        │   ├── logo.svg
         │   ├── sample.png
         │   ├── logo.svg
         │   └── logo_light.svg
@@ -62,15 +61,15 @@ tutorial/
 To install and start a local development server and preview your tutorial website, run the following commands:
 
 ```bash
-npm install
-npm start
+yarn
+yarn start
 ```
 
 #### Build and serve locally for testing
 
 ```bash
-npm run build:dev
-npm run serve:dev
+yarn run build:dev
+yarn run serve:dev
 ```
 
 The built website will be available in the `build` under `tutorial` directory.
@@ -84,7 +83,7 @@ To build the website for production, you have the following two options:
 #### Build and locally and commit manually
 
 ```bash
-npm run build:prod
+yarn run build:prod
 ```
 
 The built website will be available in the `dist` under the project root directory, you can them manually commit it.
@@ -92,7 +91,7 @@ The built website will be available in the `dist` under the project root directo
 #### Build using GitHub Actions workflow
 
 ```bash
-npm run build:gh
+yarn run build:gh
 ```
 
 This script should be used in a workflow executed by GitHub Actions to provide the necessary environment variables. The built website will be available in the `dist` directory under the project's root. Once the build artifact is uploaded to GitHub Pages, the website can be visited via the GitHub Pages URL.
