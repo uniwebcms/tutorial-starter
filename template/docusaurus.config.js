@@ -81,9 +81,9 @@ switch (npm_lifecycle_event) {
                 navbar: {
                     title: 'Introduction',
                     logo: {
-                        alt: 'UNIWEB Logo',
-                        src: 'img/uniweb_black.svg',
-                        srcDark: 'img/uniweb_white.svg',
+                        alt: 'Uniweb Modules Logo',
+                        src: 'img/logo.svg',
+                        srcDark: 'img/logo_light.svg',
                         width: 120,
                         style: { marginRight: '18px' }
                     },
@@ -99,8 +99,8 @@ switch (npm_lifecycle_event) {
                 footer: {
                     style: 'dark',
                     logo: {
-                        alt: 'UNIWEB Logo',
-                        src: 'img/uniweb_white.svg',
+                        alt: 'Uniweb Modules Logo',
+                        src: 'img/logo_light.svg',
                         width: 160,
                         height: 51
                     },
@@ -114,7 +114,7 @@ switch (npm_lifecycle_event) {
                             to: '/docs/sample-doc'
                         }
                     ],
-                    copyright: `Copyright © ${new Date().getFullYear()} @uniwebcms/tutorial-starter Built with Docusaurus.`
+                    copyright: `Copyright © ${new Date().getFullYear()} @uniwebcms/tutorial-starter by Proximify Inc.`
                 },
                 prism: {
                     theme: lightCodeTheme,
