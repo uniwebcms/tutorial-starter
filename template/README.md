@@ -68,8 +68,8 @@ yarn start
 #### Build and serve locally for testing
 
 ```bash
-yarn run build:dev
-yarn run serve:dev
+yarn build:dev
+yarn serve:dev
 ```
 
 The built website will be available in the `build` under `tutorial` directory.
@@ -83,7 +83,7 @@ To build the website for production, you have the following two options:
 #### Build and locally and commit manually
 
 ```bash
-yarn run build:prod
+yarn build:prod
 ```
 
 The built website will be available in the `dist` under the project root directory, you can them manually commit it.
@@ -91,7 +91,7 @@ The built website will be available in the `dist` under the project root directo
 #### Build using GitHub Actions workflow
 
 ```bash
-yarn run build:gh
+yarn build:gh
 ```
 
 This script should be used in a workflow executed by GitHub Actions to provide the necessary environment variables. The built website will be available in the `dist` directory under the project's root. Once the build artifact is uploaded to GitHub Pages, the website can be visited via the GitHub Pages URL.
